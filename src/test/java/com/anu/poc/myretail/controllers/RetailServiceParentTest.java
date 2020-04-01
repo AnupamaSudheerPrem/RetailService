@@ -1,0 +1,16 @@
+package com.anu.poc.myretail.controllers;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@TestPropertySource("/application.properties")
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class RetailServiceParentTest {
+	@Test
+	public void contextLoads() {
+	}
+}
