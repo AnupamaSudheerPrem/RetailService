@@ -21,6 +21,7 @@ public class DatabasePriceLookupService implements PriceLookupService {
 
 	@Override
 	public Price findByProductID(int productId) throws ResourceNotFoundException {
+		
 		LOGGER.debug("Getting the product ID from database: {}",productId);
 		//PriceDAO productPrice = priceRepository.findByProductID(productId);
 		PriceDAO priceDAO = Optional.of(priceRepository.findByProductID(productId))

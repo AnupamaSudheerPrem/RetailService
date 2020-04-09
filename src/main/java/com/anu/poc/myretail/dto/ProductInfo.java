@@ -14,7 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "product",
-    "price"
+    "price",
+    "offer"
 })
 public class ProductInfo {
 
@@ -25,6 +26,9 @@ public class ProductInfo {
     
     @JsonProperty("price")
     private Price price;
+    
+    @JsonProperty("offer")
+    private Offer offer;
 
     @JsonProperty("product")
     public Product getProduct() {
@@ -55,6 +59,18 @@ public class ProductInfo {
 	public void setPrice(Price price) {
 		this.price = price;
 	}
+    
+    @JsonProperty("offer")
+    	public Offer getOffer() {
+		return offer;
+	}
+    
+    @JsonProperty("offer")
+    public void setOffer(Offer offer) {
+		this.offer = offer;
+	}
+    
+    
     
 
 }

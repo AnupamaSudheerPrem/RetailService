@@ -8,10 +8,11 @@ import com.anu.poc.myretail.dto.Price;
 import com.anu.poc.myretail.dto.ProductInfo;
 
 @Service
-public interface ProductService  {
+public interface OfferLookupService  {
 	
-	public ProductInfo findByProductId(int productId) throws ResourceNotFoundException;
-	public ProductInfo update(ProductInfo productInfo); 
-	public Offer deleteOfferByProuctID(int productID);
+	public Offer findByProductID(int productId) throws ResourceNotFoundException; 
+	public Offer delete(Offer offer);
+	public Offer update(Offer offer);
+	public Offer deleteByProductID(int productID);
 	
 }
